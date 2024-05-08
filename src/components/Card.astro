@@ -2,21 +2,20 @@
 interface Props {
 	title: string;
 	body: string;
-	href: string;
+	image?: string
 }
 
-const { href, title, body } = Astro.props;
+const { title, body, image } = Astro.props;
 ---
 
-<li class="bg-gray-700 my-2 p-4 rounded-xl border-gray-900 border-2">
-	<a href={href}>
-		<h2>
+<div class="bg-gray-700 my-2 p-4 rounded-xl border-gray-900 border-1">
+		<h2 class="font-semibold text-gray-300">
 			{title}
-			<span>&rarr;</span>
 		</h2>
-		<p>
+		<p class="text-gray-500">
 			{body}
 		</p>
-	</a>
-</li>
+		{image && <img src={image} /> }
+		
+</div>
 

@@ -1,69 +1,65 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-const dictionary = await import('../constants/en.json')
+import type { ILanguage } from '../interfaces/language.interface';
+import Layout from '../layouts/Layout.astro';
+import { useTranslation } from '../i18n/utils';
+import type { TypesLang } from '../i18n/i18n.types';
+const {currentLocale} = Astro
+const lang = currentLocale as TypesLang
+const t = useTranslation(lang)
 ---
 
-<Layout title=`Ezequiel Menoza | ${dictionary.title}`>
+<Layout title=`Ezequiel Menoza | ${t('title')}`>
 	<main>
 		<div class="flex justify-center flex-col items-center text-indigo-400 ">
 		<img src="./ProfilePhoto.png" class="bg-gray-400 rounded-full w-56" />
 		<div>
-		<p class="text-sm text-blue-200">Hi! My name is</p>
+		<p class="text-sm text-blue-200 mt-2">{t('greeting')}</p>
 		<h1 class="text-3xl mb-2 font-semibold">Ezequiel Mendoza</h1>
 		</div>
 
 	</div>
+	<blockquote>
 		<p class="text-gray-400 font-light" >
-			¡Hola! Soy Ezequiel Mendoza, un apasionado <span class="text-gray-300 font-bold">desarrollador de software frontend</span> con más de 15 años de experiencia en la industria. Soy de Corrientes, Argentina. Mi enfoque principal ha sido siempre crear experiencias de usuario excepcionales a través de interfaces atractivas y funcionales. He trabajado con una variedad de tecnologías y herramientas, incluyendo React, React Native, Next.js, Tailwind CSS y Material UI, lo que me ha permitido desarrollar aplicaciones web y móviles innovadoras
-		
+			<!-- Soy un apasionado <span class="text-gray-300 font-bold">desarrollador de software frontend</span> con más de 15 años de experiencia en la industria. Soy de Corrientes, Argentina. Mi enfoque principal ha sido siempre crear experiencias de usuario excepcionales a través de interfaces atractivas y funcionales. He trabajado con una variedad de tecnologías y herramientas, incluyendo React, React Native, Next.js, Tailwind CSS y Material UI, lo que me ha permitido desarrollar aplicaciones web y móviles innovadoras -->
+			<!-- {dictionary.aboutme.description} -->
 		</p>
-		<div class="my-8">
-			<h2 class="font-semibold text-xl text-gray-200">Habilidades y Herramientas</h2>
-			<div class="flex bg-slate-700 space-x-4 p-3 rounded-xl">
-				<div class="w-20">
-					<img src="./images/logo-react.png" class="object-fill"   />
+	</blockquote>
+		<div class="my-8 mb-4">
+			<!-- <h2 class="font-semibold text-xl text-gray-200">{dictionary.tools}</h2> -->
+			<!-- TODO: Make better alignment to mobile devices -->
+			<div class="flex bg-slate-700 p-3 py-5 rounded-xl flex-wrap justify-around space-x-4 ">
+				<div class="flex justify-center">
+					<img src="./images/logo-react.png" class="object-fill" alt="React Js"   />
 				</div>
-				<div class="w-24">
-					<img src="./images/logo-next.png" class="object-fill"  />
+				<div class="flex justify-center">
+					<img src="./images/logo-next.png" class="object-fill" alt="Next Js"  />
 				</div>
-				<div class="w-24">
-					<img src="./images/logo-tailwind.png" class="object-fill"  />
+				<div class="flex justify-center">
+					<img src="./images/logo-astro.png" class="object-fill" alt="Astro"  />
 				</div>
-				<div class="w-24">
-					<img src="./images/logo-mui.png" class="object-fill"  />
+				<div class="flex justify-center">
+					<img src="./images/logo-tailwind.png" class="object-fill" alt="Tailwind"  />
 				</div>
-				<div class="w-24">
-					<img src="./images/logo-javascript.png" class="object-fill"  />
+				<div class="flex justify-center">
+					<img src="./images/logo-mui.png" class="object-fill" alt="Material UI"  />
 				</div>
-				<div class="w-24">
-					<img src="./images/logo-typescript.png" class="object-fill"  />
+				<div class="flex justify-center">
+					<img src="./images/logo-javascript.png" class="object-fill" alt="Javascript" />
 				</div>
-			</div>
-				
+				<div class="flex justify-center">
+					<img src="./images/logo-typescript.png" class="object-fill" alt="Typscript"  />
+				</div>
+			</div>		
 		</div>
-		<!-- <ul role="list" class="my-2">
+		<div>
+			<!-- TODO: Add iconos to titles -->
+			<!-- <h2 class="font-semibold text-xl text-gray-200">{dictionary.projects}</h2> -->
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+			title='MusicQuiz'
+			body='Applicacion de musica'
 			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul> -->
+		</div>	
 	</main>
 </Layout>
 
