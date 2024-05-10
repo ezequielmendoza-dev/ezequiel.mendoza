@@ -1,11 +1,14 @@
 ---
+import { getColorsByTech } from '../utilities';
+
 interface Props {
 	title: string;
 	body: string;
-	image?: string
+	image?: string,
+	technologies?: string[]
 }
+const { title, body, image, technologies } = Astro.props;
 
-const { title, body, image } = Astro.props;
 ---
 
 <div class="bg-gray-700  p-4 rounded-xl border-gray-900 border-1 min-h-32 break-inside-avoid-column">
@@ -16,6 +19,11 @@ const { title, body, image } = Astro.props;
 			{body}
 		</p>
 		{image && <img src={image} /> }
-		
+		<div class='flex flex-row space-x-1'>
+		{technologies?.map(item=>(
+		<div class={`${getColorsByTech(item)} p-1 rounded-full text-xs min-w-20 max-w-24 text-center`}>{item}</div>
+
+		))}
+</div>
 </div>
 
