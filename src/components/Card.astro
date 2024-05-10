@@ -8,11 +8,11 @@ interface Props {
 const { title, body, image } = Astro.props;
 ---
 
-<div class="bg-gray-700 my-2 p-4 rounded-xl border-gray-900 border-1">
+<div class="bg-gray-700  p-4 rounded-xl border-gray-900 border-1 min-h-32 break-inside-avoid-column">
 		<h2 class="font-semibold text-gray-300">
 			{title}
 		</h2>
-		<p class="text-gray-500">
+		<p class="text-gray-500 text-sm">
 			{body}
 		</p>
 		{image && <img src={image} /> }
