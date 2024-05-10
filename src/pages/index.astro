@@ -10,8 +10,9 @@ const t = useTranslation(lang)
 ---
 
 <Layout title=`Ezequiel Menoza | ${t('title')}`>
+	<!-- TODO: Add Language selector -->
 	<main>
-		<div class="flex justify-center flex-col items-center text-indigo-400 ">
+		<div class="flex justify-center flex-col items-center text-gray-200 ">
 		<img src="./ProfilePhoto.png" class="bg-gray-400 rounded-full w-56" />
 		<div>
 		<p class="text-sm text-blue-200 mt-2">{t('greeting')}</p>
@@ -21,7 +22,7 @@ const t = useTranslation(lang)
 	</div>
 	<blockquote>
 		<p class="text-gray-400 font-light" >
-			{t('description')}
+			{t('description',)}
 		</p>
 	</blockquote>
 		<div class="my-8 mb-4">
