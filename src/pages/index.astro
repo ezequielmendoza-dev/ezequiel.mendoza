@@ -1,9 +1,9 @@
 ---
 import Card from '../components/Card.astro';
-import type { ILanguage } from '../interfaces/language.interface';
 import Layout from '../layouts/Layout.astro';
 import { useTranslation } from '../i18n/utils';
 import type { TypesLang } from '../i18n/i18n.types';
+import { Projects } from '../data/projects';
 const {currentLocale} = Astro
 const lang = currentLocale as TypesLang
 const t = useTranslation(lang)
@@ -21,8 +21,9 @@ const t = useTranslation(lang)
 
 	</div>
 	<blockquote>
-		<p class="text-gray-400 font-light" >
-			{t('ui.greeting')}
+		<p class="text-gray-400 font-light">
+			
+			{t('ui.description')}
 		</p>
 	</blockquote>
 		<div class="my-8 mb-4">
@@ -62,39 +63,17 @@ const t = useTranslation(lang)
 		</div>
 		<div>
 			<!-- TODO: Add iconos to titles -->
-			<div>
+			<div class="py-7">
 			<h2 class="font-semibold text-xl text-gray-200">{t('ui.projectTitle')}</h2>
 			<div class="md:columns-2 py-1 space-y-3">
-			<!-- <Card
-			title='Full24'
-			body={t()}
-			technologies={['React','React Native', 'Mui']}
+				{Projects[lang].map((item, index)=>(
+					<Card
+			title={item.name}
+			body={item.description}
+			technologies={item.tags}
 			/>
-			<Card
-			title='Luigi Heladería '
-			body='App Android/iOS de promociones y cupones de descuentos'
-			/>
-			<Card
-			title='Audec'
-			body='Sistema para la Gestión de Peritajes de Vehículos'
-			technologies={['Next.js']}
-			/>
-			<Card
-			title='Radio Bella Vista'
-			body='App Android/iOS streaming de radio y noticias'
-			/>
-			<Card
-			title='Club San Martin'
-			body='PWA para el control de socios'
-			/>
-			<Card
-			title='MusicQuiz'
-			body='PWA juego usando API Spotify'
-			/>
-			<Card
-			title='NBATeam'
-			body='PWA API NBA'
-			/> -->
+				))}
+			
 		</div>
 	</div>
 		</div>	
