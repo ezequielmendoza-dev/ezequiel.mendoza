@@ -22,3 +22,12 @@ export const TECHNOLOGIES = [
 	'Firebase',
 	'Git',
 ]
+export const wordsToHighLight = [
+	{ word: 'desarrollador de software', className: 'text-gray-200 font-semibold' },
+	{ word: 'software developer', className: 'text-gray-200 font-semibold' },
+	{ word: 'react', className: 'text-red-400 font-semibold' },
+	{ word: 'native', className: 'text-red-400 font-semibold' },
+	{ word: 'next.js', className: 'text-red-400 font-semibold' },
+	{ word: 'tailwind', className: 'text-red-400 font-semibold' },
+	{ word: 'mui', className: 'text-red-400 font-semibold' },
+]

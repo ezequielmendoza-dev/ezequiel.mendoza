@@ -4,26 +4,30 @@ import Layout from '../layouts/Layout.astro';
 import { useTranslation } from '../i18n/utils';
 import type { TypesLang } from '../i18n/i18n.types';
 import { Projects } from '../data/projects';
+import { highlightWord } from '../utilities';
 const {currentLocale} = Astro
 const lang = currentLocale as TypesLang
 const t = useTranslation(lang)
+
 ---
 
 <Layout title=`Ezequiel Menoza | ${t('ui.title')}`>
 	<!-- TODO: Add Language selector -->
-	<main>
-		<div class="flex justify-center flex-col items-center text-gray-200 ">
-		<img src="./ProfilePhoto.png" class="bg-gray-400 rounded-full w-56" />
-		<div>
-		<p class="text-sm text-blue-200 mt-2">{t('ui.greeting')}</p>
-		<h1 class="text-3xl mb-2 font-semibold">Ezequiel Mendoza</h1>
-		</div>
-
-	</div>
+	
+	<main class="flex flex-row">
+		<sidenav>
+			<div class="flex justify-center flex-col items-center text-gray-200 ">
+				<img src="./ProfilePhoto.png" class="bg-gray-400 rounded-full w-56" />
+				<div>
+				<p class="text-sm text-blue-200 mt-2">{t('ui.greeting')}</p>
+				<h1 class="text-3xl mb-2 font-semibold">Ezequiel Mendoza</h1>
+				</div>
+		
+			</div>
+			</sidenav>	
 	<blockquote>
-		<p class="text-gray-400 font-light">
-			
-			{t('ui.description')}
+		<p class="text-gray-400 font-light">	
+			<Fragment set:html={highlightWord(t('ui.description'))} />
 		</p>
 	</blockquote>
 		<div class="my-8 mb-4">
