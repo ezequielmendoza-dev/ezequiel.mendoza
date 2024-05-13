@@ -24,9 +24,27 @@ export const Projects: TypesProjectsTranslates = {
 		},
 		{
 			name: 'Radio Bella Vista',
-			description: 'App Android/iOS streaming de radio y noticias',
+			description: 'App Android/iOS streaming de radio y noticias. Chat, Notificaciones',
 			image: 'sdasda',
 			tags: ['React Native', 'Styled Components', 'Javascript'],
+		},
+		{
+			name: 'Club San Martin',
+			description: 'PWA para la gestion de socios y pago cuotas',
+			image: 'sdasda',
+			tags: ['Next.js', 'MUI', 'Typscript'],
+		},
+		{
+			name: 'MusicQuiz',
+			description: 'Simple juego utilizando API Spotify',
+			image: 'sdasda',
+			tags: ['Next.js', 'MUI', 'Typscript'],
+		},
+		{
+			name: 'NBA Team',
+			description: 'Web con info de juegadores y equipos de la NBA',
+			image: 'sdasda',
+			tags: ['Next.js', 'MUI', 'Typscript'],
 		},
 	],
 	en: [
