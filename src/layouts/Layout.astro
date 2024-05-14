@@ -51,12 +51,12 @@ const {currentLocale} = Astro
     });
 
     menuLinks.forEach((link) => {
-        link.classList.remove('text-gray-200');
+        link.classList.remove('text-gray-200', 'bg-slate-600');
         link.classList.add('text-slate-400');
     });
 
     if (activeSectionIndex !== -1) {
-        menuLinks[activeSectionIndex].classList.add('text-gray-200');
+        menuLinks[activeSectionIndex].classList.add('text-gray-200', 'bg-slate-600');
         menuLinks[activeSectionIndex].classList.remove('text-slate-400');
 
     }
