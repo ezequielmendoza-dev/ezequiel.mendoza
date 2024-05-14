@@ -8,4 +8,7 @@ export type TypesUI = {
 	'ui.greeting': string
 	'ui.toolsTitle': string
 	'ui.projectTitle': string
+	'ui.about': string
+	'ui.experience': string
+	'ui.projects': string
 }

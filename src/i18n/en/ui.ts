@@ -9,4 +9,7 @@ export const ui: TypesUI = {
 		'I am a frontend software developer with over 15 years of experience in the industry. I am from Corrientes, Argentina. My primary focus has always been to create exceptional user experiences through appealing and functional interfaces. I have worked with a variety of technologies and tools, including React, ReactNative, Next.js, Tailwind, and MUI, allowing me to develop innovative web and mobile applications.',
 	'ui.toolsTitle': 'Tools & Skills',
 	'ui.projectTitle': 'Projects',
+	'ui.about': 'About me',
+	'ui.experience': 'Experience',
+	'ui.projects': 'Projects',
 }

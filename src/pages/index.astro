@@ -14,23 +14,17 @@ const t = useTranslation(lang)
 <Layout title=`Ezequiel Menoza | ${t('ui.title')}`>
 	<!-- TODO: Add Language selector -->
 	
-	<main class="flex flex-row">
-		<sidenav>
-			<div class="flex justify-center flex-col items-center text-gray-200 ">
-				<img src="./ProfilePhoto.png" class="bg-gray-400 rounded-full w-56" />
-				<div>
-				<p class="text-sm text-blue-200 mt-2">{t('ui.greeting')}</p>
-				<h1 class="text-3xl mb-2 font-semibold">Ezequiel Mendoza</h1>
-				</div>
-		
-			</div>
-			</sidenav>	
-	<blockquote>
-		<p class="text-gray-400 font-light">	
-			<Fragment set:html={highlightWord(t('ui.description'))} />
-		</p>
-	</blockquote>
-		<div class="my-8 mb-4">
+	
+		<main class="w-2/3" id="content">
+		<section id="about" class="lg:pb-12 pt-24">
+		<blockquote>
+			<p class="text-gray-400 font-light">	
+				<Fragment set:html={highlightWord(t('ui.description'))} />
+			</p>
+		</blockquote>
+	</section>
+	<section id="experience" class="lg:py-12">
+		<div>
 			<h2 class="font-semibold text-xl text-gray-200">{t('ui.toolsTitle')}</h2>
 			<div class="flex bg-slate-700 p-3 py-5 my-1 rounded-xl flex-wrap justify-around space-x-4 ">
 				<div class="py-3 md:py-1">
@@ -65,9 +59,9 @@ const t = useTranslation(lang)
 				</div>
 			</div>		
 		</div>
-		<div>
-			<!-- TODO: Add iconos to titles -->
-			<div class="py-7">
+	</section>
+	<section id="projects" class="lg:py-12">
+	
 			<h2 class="font-semibold text-xl text-gray-200">{t('ui.projectTitle')}</h2>
 			<div class="md:columns-2 py-1 space-y-3">
 				{Projects[lang].map((item, index)=>(
@@ -78,9 +72,8 @@ const t = useTranslation(lang)
 			/>
 				))}
 			
-		</div>
 	</div>
-		</div>	
-	</main>
+</section>
+	</main>	
 </Layout>
 
