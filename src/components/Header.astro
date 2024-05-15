@@ -1,6 +1,7 @@
 ---
 import { useTranslation } from '../i18n/utils';
 import type { TypesLang } from '../i18n/i18n.types';
+import LinksSocials from './LinksSocials.astro';
 const {currentLocale} = Astro
 const lang = currentLocale as TypesLang
 const t = useTranslation(lang)
@@ -20,5 +21,6 @@ const t = useTranslation(lang)
                 <li><a href="#projects" class="text-slate-400 py-2 px-3 rounded-lg w-full hover:text-slate-200">{t('ui.projects')}</a></li>
             </ul>
         </nav>
+        <LinksSocials />
     </div>
 </aside>
