@@ -7,7 +7,7 @@ export type TypesUI = {
 	'ui.description': string
 	'ui.greeting': string
 	'ui.toolsTitle': string
-	'ui.projectTitle': string
+	'ui.projectSubTitle': string
 	'ui.about': string
 	'ui.experience': string
 	'ui.projects': string

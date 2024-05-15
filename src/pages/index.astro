@@ -3,8 +3,9 @@ import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 import { useTranslation } from '../i18n/utils';
 import type { TypesLang } from '../i18n/i18n.types';
-import { Projects } from '../data/projects';
 import { highlightWord } from '../utilities';
+import { Projects, Experiences } from '../data';
+
 const {currentLocale} = Astro
 const lang = currentLocale as TypesLang
 const t = useTranslation(lang)
@@ -16,16 +17,14 @@ const t = useTranslation(lang)
 	
 	
 		<main class="w-2/3" id="content">
-		<section id="about" class="lg:pb-12 pt-24">
+		<section id="about" class="lg:pb-5 pt-24">
 		<blockquote>
 			<p class="text-gray-400 font-light">	
 				<Fragment set:html={highlightWord(t('ui.description'))} />
 			</p>
 		</blockquote>
-	</section>
-	<section id="experience" class="lg:py-12">
-		<div>
-			<h2 class="font-semibold text-xl text-gray-200">{t('ui.toolsTitle')}</h2>
+		<div class="pt-7">
+		<h2 class="font-semibold text-xl text-gray-200">{t('ui.toolsTitle')}</h2>
 			<div class="flex bg-slate-700 p-3 py-5 my-1 rounded-xl flex-wrap justify-around space-x-4 ">
 				<div class="py-3 md:py-1">
 					<img src="./images/logo-react.png" class="object-fill" alt="React Js"   />
@@ -60,10 +59,21 @@ const t = useTranslation(lang)
 			</div>		
 		</div>
 	</section>
-	<section id="projects" class="lg:py-12">
+	<section id="experience" class="lg:py-5">
+		<h2 class="font-semibold text-xl text-gray-200">{t('ui.experience')}</h2>
+		{Experiences[lang]?.reverse().map((item)=>(
+			<p>{item.name}</p>
+			<p>{item.period}</p>
+			<p>{item.description}</p>
+		))}
+		<div>
+			
+	</section>
+	<section id="projects" class="lg:py-5">
 	
-			<h2 class="font-semibold text-xl text-gray-200">{t('ui.projectTitle')}</h2>
-			<div class="md:columns-2 py-1 space-y-3">
+			<h2 class="font-semibold text-xl text-gray-200">{t('ui.projects')}</h2>
+			<p class="text-md font-light text-gray-400">{t('ui.projectSubTitle')}</p>
+			<div class="py-1 space-y-3">
 				{Projects[lang].map((item, index)=>(
 					<Card
 			title={item.name}

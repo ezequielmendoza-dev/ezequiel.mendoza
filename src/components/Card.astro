@@ -11,18 +11,24 @@ const { title, body, image, technologies } = Astro.props;
 
 ---
 
-<div class="bg-gray-700  p-4 rounded-xl border-gray-900 border-1 min-h-48 break-inside-avoid-column relative">
-		<h2 class="font-semibold text-gray-300">
-			{title}
-		</h2>
-		<p class="text-gray-500 text-sm">
-			{body}
-		</p>
-		{image && <img src={image} /> }
-		<div class='flex flex-row space-x-1 absolute bottom-3'>
-		{technologies?.map(item=>(
-		<div class={`${getColorsByTech(item)} py-1 px-2 rounded-full text-[12px] min-w-20 max-w-32 text-center`}>{item}</div>
-		))}
-</div>
+<div class="bg-gray-700 p-4 rounded-xl border-gray-900 border-1 columns-2 min-h-48  relative">
+		<div class="break-inside-avoid-column">
+			<img src={image} />
+			<p>Imagen</p>
+		</div>
+		<div class='break-inside-avoid-column'>
+			<h2 class="font-semibold text-gray-300">
+				{title}
+			</h2>
+			<p class="text-gray-500 text-sm">
+				{body}
+			</p>
+		
+			<div class='flex flex-row space-x-1 absolute bottom-3'>
+			{technologies?.map(item=>(
+			<div class={`${getColorsByTech(item)} py-1 px-2 rounded-full text-[12px] min-w-20 max-w-32 text-center`}>{item}</div>
+			))}
+			</div>
+		</div>
 </div>
 
