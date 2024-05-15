@@ -7,17 +7,22 @@ export const Experiences: TypesExperiencesTranslates = {
 		{
 			name: 'Itemax',
 			period: '2004 - 2006',
-			description: 'Soporte técnico y atención a clientes ',
+			description: 'Soporte técnico y atención a clientes de servicio de internet',
 		},
 		{
 			name: 'Banco de Corrientes',
 			period: '2006 - 2021',
-			description: 'Atención a clientes',
+			description: 'Atención a comercial y operativa a clientes bancarios',
+		},
+		{
+			name: 'Desarrollador Freelance',
+			period: '2008-actual',
+			description: 'Desarrollador fullstack y mobile en diversos proyectos para clientes de diferentes industrias',
 		},
 		{
 			name: 'Globant',
 			period: '2021 - actual',
-			description: 'Software Developer Ssr. Desarrollo web frontend',
+			description: 'Software Developer Ssr Adv. Desarrollo web frontend en diferentes proyectos',
 		},
 	],
 }

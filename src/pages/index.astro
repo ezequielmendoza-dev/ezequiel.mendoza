@@ -16,7 +16,7 @@ const t = useTranslation(lang)
 	<!-- TODO: Add Language selector -->
 	
 	
-		<main class="w-2/3" id="content">
+		<main class="w-full" id="content">
 		<section id="about" class="lg:pb-5 pt-24">
 		<blockquote>
 			<p class="text-gray-400 font-light">	
@@ -62,9 +62,15 @@ const t = useTranslation(lang)
 	<section id="experience" class="lg:py-5">
 		<h2 class="font-semibold text-xl text-gray-200">{t('ui.experience')}</h2>
 		{Experiences[lang]?.reverse().map((item)=>(
-			<p>{item.name}</p>
-			<p>{item.period}</p>
-			<p>{item.description}</p>
+			<div class="columns-2 py-3">
+				<div class="break-inside-avoid-column">
+					<p class='font-semibold text-slate-200'>{item.name}</p>
+					<p class='text-gray-600 text-sm'>{item.period}</p>
+				</div>
+				<div class="break-inside-avoid-column">
+					<p class='text-slate-400 text-sm leading-normal'>{item.description}</p>
+				</div>
+			</div>
 		))}
 		<div>
 			
