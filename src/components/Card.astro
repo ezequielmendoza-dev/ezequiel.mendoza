@@ -1,6 +1,4 @@
 ---
-import { getColorsByTech } from '../utilities';
-
 interface Props {
 	title: string;
 	body: string;
@@ -26,7 +24,7 @@ const { title, body, image, technologies } = Astro.props;
 		
 			<div class='flex flex-row space-x-1 absolute bottom-3'>
 			{technologies?.map(item=>(
-			<div class={`${getColorsByTech(item)} py-1 px-2 rounded-full text-[12px] min-w-20 max-w-32 text-center`}>{item}</div>
+			<div class={`bg-sky-300/10 text-sky-300 py-1 px-2 rounded-full text-[12px] min-w-20 max-w-32 text-center`}>{item}</div>
 			))}
 			</div>
 		</div>
