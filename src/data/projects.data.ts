@@ -50,9 +50,45 @@ export const ProjectsData: TypesProjectsTranslates = {
 	en: [
 		{
 			name: 'Full24-EN',
-			description: 'Android/iOS App',
+			description: 'App for Android/iOS. Grocery. Purchases, Promotions, Notifications',
 			image: 'sdasda',
 			tags: ['React Native', 'Native Base'],
+		},
+		{
+			name: 'Audec',
+			description: 'System for the management of vehicle appraisals',
+			image: 'sdasda',
+			tags: ['Next.js', 'Tailwind', 'Typescript'],
+		},
+		{
+			name: 'Luigi Heladeria',
+			description: 'Android/iOS app for promotions and discount coupons',
+			image: 'sdasda',
+			tags: ['React Native', 'Styled Components', 'Typescript'],
+		},
+		{
+			name: 'Radio Bella Vista',
+			description: 'Android/iOS app streaming radio and news. Chat, Notifications',
+			image: 'sdasda',
+			tags: ['React Native', 'Styled Components', 'Javascript'],
+		},
+		{
+			name: 'Club San Martin',
+			description: 'PWA for member management and payment of fees',
+			image: 'sdasda',
+			tags: ['Next.js', 'MUI', 'Typscript'],
+		},
+		{
+			name: 'MusicQuiz',
+			description: 'Simple game using Spotify API',
+			image: 'sdasda',
+			tags: ['Next.js', 'MUI', 'Typscript'],
+		},
+		{
+			name: 'NBA Team',
+			description: 'Website with information on NBA players and teams',
+			image: 'sdasda',
+			tags: ['Next.js', 'MUI', 'Typscript'],
 		},
 	],
 }
