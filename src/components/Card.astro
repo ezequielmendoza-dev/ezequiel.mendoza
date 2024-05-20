@@ -21,9 +21,9 @@ const { title, body, image, technologies } = Astro.props;
 			<p class="text-gray-500 text-sm">
 				{body}
 			</p>
-			<div class='flex flex-wrap space-x-1 bottom-3'>
+			<div class='flex flex-wrap space-x-1 bottom-2 absolute'>
 			{technologies?.map(item=>(
-			<div class='flex items-center rounded-full bg-sky-300/10 px-3 py-1 text-xs font-medium leading-5 text-sky-300 '>{item}</div>
+			<div class='flex items-center rounded-full bg-sky-300/10 px-3 py-1 text-xs font-medium leading-5 text-sky-300 mt-2 '>{item}</div>
 			))}
 			</div>
 		</div>
