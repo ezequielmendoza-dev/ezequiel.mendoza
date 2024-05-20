@@ -49,7 +49,7 @@ export const ProjectsData: TypesProjectsTranslates = {
 	],
 	en: [
 		{
-			name: 'Full24-EN',
+			name: 'Full24',
 			description: 'App for Android/iOS. Grocery. Purchases, Promotions, Notifications',
 			image: 'sdasda',
 			tags: ['React Native', 'Native Base'],
