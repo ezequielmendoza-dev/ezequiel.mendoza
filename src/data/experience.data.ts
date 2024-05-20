@@ -2,7 +2,7 @@
 
 import type { TypesExperiencesTranslates } from '../constants/index.types'
 
-export const Experiences: TypesExperiencesTranslates = {
+export const ExperiencesData: TypesExperiencesTranslates = {
 	es: [
 		{
 			name: 'Itemax',

@@ -1,11 +1,10 @@
 ---
-import Card from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
 import { useTranslation } from '../i18n/utils';
 import type { TypesLang } from '../i18n/i18n.types';
-import { highlightWord } from '../utilities';
-import { Projects, Experiences } from '../data';
-import Tools from '../components/Tools.astro';
+import About from '../components/About.astro';
+import Experiences from '../components/Experiences.astro';
+import Projects from '../components/Projects.astro';
 
 const {currentLocale} = Astro
 const lang = currentLocale as TypesLang
@@ -15,49 +14,10 @@ const t = useTranslation(lang)
 
 <Layout title=`Ezequiel Menoza | ${t('ui.title')}`>
 	<!-- TODO: Add Language selector -->
-	
-	
-		<main class="w-full" id="content">
-		<section id="about" class="lg:pb-5 pt-24 ">
-			<h2 class="font-semibold text-xl text-gray-200 pb-2 underline">{t('ui.about')}</h2>
-			<blockquote>
-				<p class="text-gray-400 font-light">	
-					<Fragment set:html={highlightWord(t('ui.description'))} />
-				</p>
-			</blockquote>
-		<Tools />
-	</section>
-	<section id="experience" class="lg:py-5">
-		<h2 class="font-semibold text-xl text-gray-200 pb-2 underline">{t('ui.experience')}</h2>
-		{Experiences[lang]?.reverse().map((item)=>(
-			<div class="columns-2 pb-3">
-				<div class="break-inside-avoid-column">
-					<p class='font-semibold text-slate-300'>{item.name}</p>
-					<p class='text-gray-600 text-sm'>{item.period}</p>
-				</div>
-				<div class="break-inside-avoid-column">
-					<p class='text-slate-400 text-sm leading-normal'>{item.description}</p>
-				</div>
-			</div>
-		))}
-		<div>
-			
-	</section>
-	<section id="projects" class="lg:py-5">
-	
-			<h2 class="font-semibold text-xl text-gray-200 underline">{t('ui.projects')}</h2>
-			<p class="text-md font-light text-gray-400 pb-2">{t('ui.projectSubTitle')}</p>
-			<div class="pb-1 space-y-3">
-				{Projects[lang].map((item, index)=>(
-					<Card
-			title={item.name}
-			body={item.description}
-			technologies={item.tags}
-			/>
-				))}
-			
-	</div>
-</section>
-	</main>	
+		<main class="pt-24 lg:w-2/3 lg:py-24" id="content">
+			<About />
+			<Experiences />
+			<Projects />
+		</main>	
 </Layout>
 

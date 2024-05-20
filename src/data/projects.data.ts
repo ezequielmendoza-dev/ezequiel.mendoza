@@ -2,7 +2,7 @@
 
 import type { TypesProjectsTranslates } from '../constants/index.types'
 
-export const Projects: TypesProjectsTranslates = {
+export const ProjectsData: TypesProjectsTranslates = {
 	es: [
 		{
 			name: 'Full24',
