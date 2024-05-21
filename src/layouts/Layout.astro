@@ -5,8 +5,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const {currentLocale, site, url} = Astro
-const URL_SITE = import.meta.env.SITE
+const {currentLocale} = Astro
+import {PRODUCTION_URL} from '../constants/index'
 
 ---
 
@@ -25,9 +25,9 @@ const URL_SITE = import.meta.env.SITE
 		
 		<div class="mx-auto min-h-screen max-w-screen-xl px-6 py-2 font-sans md:px-12 md:py-20 lg:px-32 lg:py-0 lg:flex lg:justify-between lg:gap-10 relative">
 			<div class="flex space-x-2 p-5 justify-end">
-				<a href=`${URL_SITE}/en` class={currentLocale === 'en' ? 'text-sky-300' : 'text-sky-700'}>EN</a>
+				<a href=`${PRODUCTION_URL}/en` class={currentLocale === 'en' ? 'text-sky-300' : 'text-sky-700'}>EN</a>
 				<p class="text-sm text-sky-800">|</p>
-				<a href=`${URL_SITE}/es` class={currentLocale === 'es' ? 'text-sky-300' : 'text-sky-700'}>ES</a>
+				<a href=`${PRODUCTION_URL}/es` class={currentLocale === 'es' ? 'text-sky-300' : 'text-sky-700'}>ES</a>
 			</div>
 			<Header />			
 			<slot />

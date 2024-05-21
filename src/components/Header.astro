@@ -5,12 +5,12 @@ import LinksSocials from './LinksSocials.astro';
 const {currentLocale, url} = Astro
 const lang = currentLocale as TypesLang
 const t = useTranslation(lang)
-const URL_SITE = import.meta.env.SITE
+import {PRODUCTION_URL} from '../constants/index'
 
 ---
 <aside class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/3 lg:flex-col lg:justify-between lg:py-24">
     <div class="flex justify-center flex-col  text-gray-200 ">
-        <img src=`${URL_SITE}/ProfilePhoto.png` class="bg-gray-400 rounded-full w-56" />
+        <img src=`${PRODUCTION_URL}/ProfilePhoto.png` class="bg-gray-400 rounded-full w-56" />
         <div class="items-start flex flex-col">
         <h1 class="text-3xl font-bold">Ezequiel Mendoza</h1>
         <h2 class="text-md text-slate-500 font-semibold">{t('ui.title')}<h2/>
