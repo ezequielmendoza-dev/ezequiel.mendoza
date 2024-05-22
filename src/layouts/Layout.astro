@@ -21,7 +21,7 @@ import {PRODUCTION_URL} from '../constants/index'
 		<title>{title}</title>
 		
 	</head>
-	<body class="bg-gray-800">
+	<body class="bg-gray-900">
 		
 		<div class="mx-auto min-h-screen max-w-screen-xl px-6 py-2 font-sans md:px-12 md:py-20 lg:px-32 lg:py-0 lg:flex lg:justify-between lg:gap-10 relative">
 			<div class="flex space-x-2 p-5 justify-end">
@@ -55,13 +55,12 @@ import {PRODUCTION_URL} from '../constants/index'
     });
 
     menuLinks.forEach((link) => {
-        link.classList.remove('text-sky-200', 'bg-sky-600/20');
-        link.classList.add('text-sky-400');
+        link.classList.remove('text-sky-500');
+        link.classList.add('text-gray-500');
     });
 
     if (activeSectionIndex !== -1) {
-        menuLinks[activeSectionIndex].classList.add('text-sky-200', 'bg-sky-600/20');
-        menuLinks[activeSectionIndex].classList.remove('text-sky-400');
+        menuLinks[activeSectionIndex].classList.add('text-sky-500');
 
     }
 }		window.addEventListener('scroll', updateMenu);
