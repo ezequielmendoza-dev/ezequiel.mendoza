@@ -17,13 +17,15 @@ import {PRODUCTION_URL} from '../constants/index'
 		<meta name="description" content="Software Engineer - Frontend Developer" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		
 	</head>
-	<body class="bg-gray-900">
-		
-		<div class="mx-auto min-h-screen max-w-screen-xl px-6 py-2 font-sans md:px-12 md:py-20 lg:px-32 lg:py-0 lg:flex lg:justify-between lg:gap-10 relative">
+	<body class="bg-gray-900 font-redit">
+		<div class="mx-auto min-h-screen max-w-screen-xl px-6 py-2  md:px-12 md:py-20 lg:px-32 lg:py-0 lg:flex lg:justify-between lg:gap-10 relative">
 			<div class="flex space-x-2 p-5 justify-end">
 				<a href=`${PRODUCTION_URL}/en` class={currentLocale === 'en' ? 'text-sky-300' : 'text-sky-700'}>EN</a>
 				<p class="text-sm text-sky-800">|</p>
