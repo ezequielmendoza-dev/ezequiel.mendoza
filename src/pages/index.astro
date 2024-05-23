@@ -1,25 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { useTranslation } from '../i18n/utils';
-import type { TypesLang } from '../i18n/i18n.types';
-import About from '../components/About.astro';
-import Experiences from '../components/Experiences.astro';
-import Projects from '../components/Projects.astro';
-import Tools from "../components/Tools.astro"
+import Layout from '../layouts/Layout.astro'
+import { useTranslation } from '../i18n/utils'
+import type { TypesLang } from '../i18n/i18n.types'
+import About from '../components/About.astro'
+import Experiences from '../components/Experiences.astro'
+import Projects from '../components/Projects.astro'
+import Tools from '../components/Tools.astro'
 
-const {currentLocale} = Astro
+const { currentLocale } = Astro
 const lang = currentLocale as TypesLang
 const t = useTranslation(lang)
-
 ---
 
 <Layout title=`Ezequiel Menoza | ${t('ui.title')}`>
-	<!-- TODO: Add Language selector -->
-		<main class="lg:pt-24 lg:w-2/3 lg:py-24 pt-6" id="content">
-			<About />
-			<Experiences />
-			<Tools />
-			<Projects />
-		</main>	
+	<main class='lg:pt-24 lg:w-2/3 lg:py-24 pt-6' id='content'>
+		<About />
+		<Experiences />
+		<Tools />
+		<Projects />
+	</main>
 </Layout>
-

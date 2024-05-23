@@ -1,20 +1,20 @@
 ---
-import type { TypesLang } from "../i18n/i18n.types";
-import { useTranslation } from "../i18n/utils";
-import { highlightWord } from "../utilities";
-const {currentLocale} = Astro
+import type { TypesLang } from '../i18n/i18n.types'
+import { useTranslation } from '../i18n/utils'
+import { highlightWord } from '../utilities'
+const { currentLocale } = Astro
 const lang = currentLocale as TypesLang
 const t = useTranslation(lang)
 ---
 
-<section id="about" class="pb-10">
-    <div class="sticky top-0 backdrop-blur-lg z-20 -mx-6 pb-2 px-6 lg:relative">
-        <h2 class="font-semibold text-xl text-gray-100">{t('ui.about')}</h2>
-        <div class="w-11 h-1 bg-sky-600 my-1 rounded-lg" />
-    </div>
-    <blockquote>
-        <p class="text-gray-400 font-light">	
-            <Fragment set:html={highlightWord(t('ui.description'))} />
-        </p>
-    </blockquote>
+<section id='about'>
+	<div class='sticky top-0 backdrop-blur-lg z-20 -mx-6 py-2 px-6 lg:relative'>
+		<h2 class='font-semibold text-xl text-gray-100'>{t('ui.about')}</h2>
+		<div class='w-11 h-1 bg-sky-600 my-1 rounded-lg'></div>
+	</div>
+	<blockquote>
+		<p class='text-gray-400 font-light'>
+			<Fragment set:html={highlightWord(t('ui.description'))} />
+		</p>
+	</blockquote>
 </section>

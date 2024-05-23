@@ -1,70 +1,70 @@
 ---
-import Header from '../components/Header.astro';
+import Header from '../components/Header.astro'
 interface Props {
-	title: string;
+	title: string
 }
 
-const { title } = Astro.props;
-const {currentLocale} = Astro
-import {PRODUCTION_URL} from '../constants/index'
-
+const { title } = Astro.props
+const { currentLocale } = Astro
+import { PRODUCTION_URL } from '../constants/index'
 ---
 
 <!doctype html>
-<html lang={currentLocale} class="scroll-smooth">
+<html lang={currentLocale} class='scroll-smooth'>
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Software Engineer - Frontend Developer" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
+		<meta charset='UTF-8' />
+		<meta name='description' content='Software Engineer - Frontend Developer' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<link rel='preconnect' href='https://fonts.googleapis.com' />
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+		<link
+			href='https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap'
+			rel='stylesheet'
+		/>
+		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
-		
 	</head>
-	<body class="bg-gray-900 font-redit">
-		<div class="mx-auto min-h-screen max-w-screen-xl px-6 py-2  md:px-12 md:py-20 lg:px-32 lg:py-0 lg:flex lg:justify-between lg:gap-10 relative">
-			<div class="flex space-x-2 p-5 justify-end">
-				<a href=`${PRODUCTION_URL}/en` class={currentLocale === 'en' ? 'text-sky-300' : 'text-sky-700'}>EN</a>
-				<p class="text-sm text-sky-800">|</p>
-				<a href=`${PRODUCTION_URL}/es` class={currentLocale === 'es' ? 'text-sky-300' : 'text-sky-700'}>ES</a>
+	<body class='bg-gray-900 font-redit'>
+		<div
+			class='mx-auto min-h-screen max-w-screen-xl px-6 py-2 md:px-12 md:py-20 lg:px-32 lg:py-0 lg:flex lg:justify-between lg:gap-10 relative'
+		>
+			<div class='flex space-x-2 p-5 justify-end'>
+				<a href=`${PRODUCTION_URL}/en` class={currentLocale === 'en' ? 'text-sky-300' : 'text-sky-400'}>EN</a>
+				<p class='text-sm text-sky-800'>|</p>
+				<a href=`${PRODUCTION_URL}/es` class={currentLocale === 'es' ? 'text-sky-300' : 'text-sky-400'}>ES</a>
 			</div>
-			<Header />			
+			<Header />
 			<slot />
 			<!-- <Footer /> -->
 		</div>
 	</body>
 	<script is:inline>
-		const sections = document.querySelectorAll('section');
-		const menuLinks = document.querySelectorAll('nav ul li a');
+		const sections = document.querySelectorAll('section')
+		const menuLinks = document.querySelectorAll('nav ul li a')
 		function isSectionVisible(section) {
-			const rect = section.getBoundingClientRect();
-			return (
-        rect.bottom > 0 &&
-        rect.top < window.innerHeight
-    );
+			const rect = section.getBoundingClientRect()
+			return rect.bottom > 0 && rect.top < window.innerHeight + 200
 		}
-		
+
 		function updateMenu() {
-    let activeSectionIndex = -1;
-    sections.forEach((section, index) => {
-        const link = menuLinks[index];
-        if (isSectionVisible(section) && activeSectionIndex === -1) {
-            activeSectionIndex = index;
-        }
-    });
+			let activeSectionIndex = -1
+			sections.forEach((section, index) => {
+				const link = menuLinks[index]
+				if (isSectionVisible(section) && activeSectionIndex === -1) {
+					activeSectionIndex = index
+				}
+			})
 
-    menuLinks.forEach((link) => {
-        link.classList.remove('text-sky-500');
-        link.classList.add('text-gray-500');
-    });
+			menuLinks.forEach((link) => {
+				link.classList.remove('text-sky-500')
+				link.classList.add('text-gray-400')
+			})
 
-    if (activeSectionIndex !== -1) {
-        menuLinks[activeSectionIndex].classList.add('text-sky-500');
-
-    }
-}		window.addEventListener('scroll', updateMenu);
-				</script>
+			if (activeSectionIndex !== -1) {
+				menuLinks[activeSectionIndex].classList.add('text-sky-500')
+			}
+		}
+		window.addEventListener('scroll', updateMenu)
+	</script>
 </html>
