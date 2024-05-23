@@ -13,10 +13,14 @@ const t = useTranslation(lang)
         <h2 class="font-semibold text-xl text-gray-100 sticky top-0">{t('ui.experience')}</h2>
         <div class="w-11 h-1 bg-sky-600 my-1 rounded-lg" />
     </div>
-    {ExperiencesData[lang]?.map((item)=>(
-        <div class="columns-2 pb-3">
+    {ExperiencesData[lang]?.map((item)=>(      
+        <div class="columns-2 pb-10 px-3 border-s  dark:border-gray-700 items-start justify-start">
             <div class="break-inside-avoid-column">
-                <p class='font-semibold text-slate-300'>{item.name}</p>
+                <div class="flex items-start">
+                <div
+                    class="-ms-[17px] me-3 h-[9px] w-[9px] rounded-full  dark:bg-sky-700 mt-2"></div>
+                <p class='font-semibold text-slate-300 '>{item.name}</p>
+            </div>
                 <p class='text-gray-600 text-sm'>{item.period}</p>
             </div>
             <div class="break-inside-avoid-column">
