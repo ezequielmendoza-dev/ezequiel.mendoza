@@ -13,7 +13,8 @@ export const ProjectsData: TypesProjectsTranslates = {
     },
     {
       name: "Audec",
-      description: "Sistema para la gestión de peritajes de vehiculos",
+      description:
+        "Sistema para la gestión de peritajes y tasación de vehiculos",
       image: "sdasda",
       tags: ["Next.js", "Tailwind", "Typescript"],
     },
@@ -59,7 +60,8 @@ export const ProjectsData: TypesProjectsTranslates = {
     },
     {
       name: "Audec",
-      description: "System for the management of vehicle appraisals",
+      description:
+        "Software for the management of expert reports and vehicle valuation",
       image: "sdasda",
       tags: ["Next.js", "Tailwind", "Typescript"],
     },

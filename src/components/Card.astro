@@ -8,9 +8,10 @@ interface Props {
 const { title, body, image, technologies } = Astro.props
 ---
 
+<!-- TODO: Add images of projects -->
 <div class='bg-gray-700 p-4 rounded-xl border-gray-900 border-1 lg:columns-2 columns-1 min-h-48 relative'>
 	<div class='break-inside-avoid-column'>
-		<img src={image} />
+		<img src={image} alt={title} />
 		<p>Imagen</p>
 	</div>
 	<div class='break-inside-avoid-column'>
