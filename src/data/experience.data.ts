@@ -8,7 +8,7 @@ export const ExperiencesData: TypesExperiencesTranslates = {
       name: "Globant",
       period: "2021 - actual",
       description:
-        "Software Developer Ssr Adv. Desarrollo web frontend en diferentes proyectos",
+        "Software Developer Ssr Adv. He trabajado en diferentes proyectos como web ui developer",
     },
     {
       name: "Desarrollador Freelance",
@@ -33,7 +33,7 @@ export const ExperiencesData: TypesExperiencesTranslates = {
       name: "Globant",
       period: "2021 - current",
       description:
-        "Software Developer Ssr Adv. Frontend web development in different projects",
+        "Software Developer Ssr Adv. I have worked in different projects as web ui developer",
     },
 
     {

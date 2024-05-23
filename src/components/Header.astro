@@ -20,25 +20,28 @@ import { PRODUCTION_URL } from '../constants/index'
 			/>
 			<div class='items-start flex flex-col'>
 				<h1 class='text-2xl font-bold'>Ezequiel Mendoza</h1>
-				<h2 class='text-xl text-gray-500/90 font-semibold'>{t('ui.title')}<h2></h2></h2>
+				<h2 class='text-xl text-gray-500/90 font-semibold'>{t('ui.title')}</h2>
 			</div>
-			<nav class='hidden lg:flex py-10 text-left'>
-				<ul class='flex flex-col gap-2'>
-					<li>
-						<a href='#about' class='text-sky-500 font-semibold py-2 px-3 rounded-lg w-full hover:text-gray-400'
-							>{t('ui.about')}</a>
-					</li>
-					<li>
-						<a href='#experience' class='text-gray-400 font-semibold py-2 px-3 rounded-lg w-full hover:text-gray-400'
-							>{t('ui.experience')}</a>
-					</li>
-					<li>
-						<a href='#projects' class='text-gray-400 font-semibold py-2 px-3 rounded-lg w-full hover:text-gray-400'
-							>{t('ui.projects')}</a>
-					</li>
-				</ul>
-			</nav>
-			<LinksSocials />
 		</div>
+		<nav class='hidden lg:flex py-10 text-left'>
+			<ul class='flex flex-col gap-2'>
+				<li>
+					<a href='#about' class='text-sky-500 font-semibold py-2 px-3 rounded-lg w-full hover:text-gray-400'
+						>{t('ui.about')}</a
+					>
+				</li>
+				<li>
+					<a href='#experience' class='text-gray-400 font-semibold py-2 px-3 rounded-lg w-full hover:text-gray-400'
+						>{t('ui.experience')}</a
+					>
+				</li>
+				<li>
+					<a href='#projects' class='text-gray-400 font-semibold py-2 px-3 rounded-lg w-full hover:text-gray-400'
+						>{t('ui.projects')}</a
+					>
+				</li>
+			</ul>
+		</nav>
+		<LinksSocials />
 	</div>
 </aside>
