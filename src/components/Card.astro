@@ -1,31 +1,33 @@
 ---
 interface Props {
-	title: string;
-	body: string;
-	image?: string,
+	title: string
+	body: string
+	image?: string
 	technologies?: string[]
 }
-const { title, body, image, technologies } = Astro.props;
-
+const { title, body, image, technologies } = Astro.props
 ---
 
-<div class="bg-gray-700 p-4 rounded-xl border-gray-900 border-1 lg:columns-2 columns-1 min-h-48  relative">
-		<div class="break-inside-avoid-column">
-			<img src={image} />
-			<p>Imagen</p>
+<div class='bg-gray-700 p-4 rounded-xl border-gray-900 border-1 lg:columns-2 columns-1 min-h-48 relative'>
+	<div class='break-inside-avoid-column'>
+		<img src={image} />
+		<p>Imagen</p>
+	</div>
+	<div class='break-inside-avoid-column'>
+		<h2 class='font-semibold text-gray-300'>
+			{title}
+		</h2>
+		<p class='text-gray-500 text-sm'>
+			{body}
+		</p>
+		<div class='flex flex-wrap space-x-1 bottom-2 absolute'>
+			{
+				technologies?.map((item) => (
+					<div class='flex items-center rounded-full bg-sky-300/10 px-3 py-1 text-xs font-medium leading-5 text-sky-300 mt-2 '>
+						{item}
+					</div>
+				))
+			}
 		</div>
-		<div class='break-inside-avoid-column'>
-			<h2 class="font-semibold text-gray-300">
-				{title}
-			</h2>
-			<p class="text-gray-500 text-sm">
-				{body}
-			</p>
-			<div class='flex flex-wrap space-x-1 bottom-2 absolute'>
-			{technologies?.map(item=>(
-			<div class='flex items-center rounded-full bg-sky-300/10 px-3 py-1 text-xs font-medium leading-5 text-sky-300 mt-2 '>{item}</div>
-			))}
-			</div>
-		</div>
+	</div>
 </div>
-

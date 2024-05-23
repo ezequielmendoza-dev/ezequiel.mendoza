@@ -1,28 +1,24 @@
 ---
-import { ProjectsData } from '../data';
-import Card from './Card.astro';
-import type { TypesLang } from "../i18n/i18n.types";
-import { useTranslation } from "../i18n/utils";
-const {currentLocale} = Astro
+import { ProjectsData } from '../data'
+import Card from './Card.astro'
+import type { TypesLang } from '../i18n/i18n.types'
+import { useTranslation } from '../i18n/utils'
+const { currentLocale } = Astro
 const lang = currentLocale as TypesLang
 const t = useTranslation(lang)
-
 ---
-<section id="projects" class="pb-10">
-    <div class="sticky top-0 backdrop-blur-lg z-20 -mx-6 pb-2 px-6 lg:relative">
-        <h2 class="font-semibold text-xl text-gray-200">{t('ui.projects')}</h2>
-        <div class="w-11 h-1 bg-sky-600 my-1 rounded-lg" />
 
-    </div>
-    <p class="text-md font-light text-gray-400 pb-2">{t('ui.projectSubTitle')}</p>
-    <div class="pb-1 space-y-3">
-        {ProjectsData[lang].map((item, index)=>(
-            <Card
-    title={item.name}
-    body={item.description}
-    technologies={item.tags}
-    />
-        ))}
-    
-</div>
+<section id='projects' class='mt-10'>
+	<div class='sticky top-0 backdrop-blur-lg z-20 -mx-6 p-2 px-6 lg:relative'>
+		<h2 class='font-semibold text-xl text-gray-200'>{t('ui.projects')}</h2>
+		<div class='w-11 h-1 bg-sky-600 my-1 rounded-lg'></div>
+	</div>
+	<p class='text-md font-light text-gray-400 pb-2'>{t('ui.projectSubTitle')}</p>
+	<div class='pb-1 space-y-3'>
+		{
+			ProjectsData[lang].map((item, index) => (
+				<Card title={item.name} body={item.description} technologies={item.tags} />
+			))
+		}
+	</div>
 </section>
