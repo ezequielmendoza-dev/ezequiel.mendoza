@@ -1,6 +1,6 @@
 /** @format */
 
-import { wordsToHighLight } from "../constants";
+import { PRODUCTION_URL, wordsToHighLight } from "../constants";
 export const highlightWord = (text: string) => {
   const escapedWords = wordsToHighLight.map((wordObj) =>
     wordObj.word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
@@ -16,4 +16,8 @@ export const highlightWord = (text: string) => {
     }
     return part;
   });
+};
+export const getCurrentHost = () => {
+  if (import.meta.env.MODE === "production") return PRODUCTION_URL;
+  return import.meta.env.SITE;
 };

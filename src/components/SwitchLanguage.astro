@@ -1,0 +1,11 @@
+---
+const { currentLocale, url } = Astro
+
+import { getCurrentHost } from '../utilities'
+---
+
+<div class='flex space-x-2 px-5 justify-start'>
+	<a href=`${getCurrentHost()}/es` class={currentLocale === 'es' ? 'text-sky-300' : 'text-sky-700'}>ES</a>
+	<p class='text-sm text-sky-800'>|</p>
+	<a href=`${getCurrentHost()}/en` class={currentLocale === 'en' ? 'text-sky-300' : 'text-sky-700'}>EN</a>
+</div>

@@ -9,9 +9,11 @@ const t = useTranslation(lang)
 
 <section id='experience' class='mt-10'>
 	<div class='sticky top-0 backdrop-blur-lg z-20 -mx-6 py-2 px-6 lg:relative'>
-		<h2 class='font-semibold text-xl text-gray-100 sticky top-0'>{t('ui.experience')}</h2>
+		<h2 class='font-semibold text-xl text-gray-100 sticky top-0'>{t('ui.experienceTitle')}</h2>
 		<div class='w-11 h-1 bg-sky-600 my-1 rounded-lg'></div>
+		<p class='text-sm font-light text-gray-400 pb-2'>{t('ui.experienceSubTitle')}</p>
 	</div>
+
 	{
 		ExperiencesData[lang]?.map((item) => (
 			<div class='columns-2 pb-10 px-3 border-s  dark:border-gray-700 items-start justify-start'>

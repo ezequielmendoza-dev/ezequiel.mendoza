@@ -7,8 +7,10 @@ export type TypesUI = {
   "ui.description": string;
   "ui.greeting": string;
   "ui.toolsTitle": string;
-  "ui.projectSubTitle": string;
+  "ui.toolsSubTitle": string;
+  "ui.projectsTitle": string;
+  "ui.projectsSubTitle": string;
   "ui.about": string;
-  "ui.experience": string;
-  "ui.projects": string;
+  "ui.experienceTitle": string;
+  "ui.experienceSubTitle": string;
 };
