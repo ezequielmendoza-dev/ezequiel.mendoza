@@ -10,10 +10,10 @@ const t = useTranslation(lang)
 
 <section id='projects' class='mt-10'>
 	<div class='sticky top-0 backdrop-blur-lg z-20 -mx-6 p-2 px-6 lg:relative'>
-		<h2 class='font-semibold text-xl text-gray-200'>{t('ui.projects')}</h2>
+		<h2 class='font-semibold text-xl text-gray-200'>{t('ui.projectsTitle')}</h2>
 		<div class='w-11 h-1 bg-sky-600 my-1 rounded-lg'></div>
+		<p class='text-sm font-light text-gray-400 pb-2'>{t('ui.projectsSubTitle')}</p>
 	</div>
-	<p class='text-md font-light text-gray-400 pb-2'>{t('ui.projectSubTitle')}</p>
 	<div class='pb-1 space-y-3'>
 		{
 			ProjectsData[lang].map((item, index) => (

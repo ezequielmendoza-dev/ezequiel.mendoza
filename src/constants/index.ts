@@ -1,5 +1,6 @@
 /** @format */
 export const PRODUCTION_URL = "https://checomendoza.github.io/ezequiel.mendoza";
+export const DEVELOPMENT_URL = "https://localhost:4321";
 export const PROJECTS_NAMES = [
   "FULL24",
   "AUDEC",
