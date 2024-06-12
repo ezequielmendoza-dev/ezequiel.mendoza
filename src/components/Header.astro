@@ -5,8 +5,8 @@ import LinksSocials from './LinksSocials.astro'
 const { currentLocale } = Astro
 const lang = currentLocale as TypesLang
 const t = useTranslation(lang)
-import { PRODUCTION_URL } from '../constants/index'
 import SwitchLanguage from './SwitchLanguage.astro'
+import { getCurrentHost } from '../utilities'
 ---
 
 <aside class='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/3 lg:flex-col lg:py-24 space-y-2'>
@@ -16,7 +16,7 @@ import SwitchLanguage from './SwitchLanguage.astro'
 	>
 		<div class='flex flex-col items-center gap-3 py-5'>
 			<img
-				src=`${PRODUCTION_URL}/ProfilePhoto.png`
+				src=`${getCurrentHost()}/images/webp/ProfilePhoto.webp`
 				class='bg-gray-400 rounded-full w-44'
 				alt='Ezequiel Mendoza | Software Developer'
 			/>

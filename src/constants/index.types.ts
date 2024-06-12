@@ -4,9 +4,9 @@ export type TypesProjects = {
   id: number;
   name: string;
   description: string;
-  image: string;
+  images: string[];
   tags: string[];
-  link: string;
+  link: string | null;
 };
 export type TypesExperiences = {
   name: string;

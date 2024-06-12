@@ -17,7 +17,7 @@ const t = useTranslation(lang)
 	<div class='pb-1 space-y-3'>
 		{
 			ProjectsData[lang].map((item, index) => (
-				<Card title={item.name} body={item.description} technologies={item.tags} />
+				<Card title={item.name} body={item.description} technologies={item.tags} images={item.images} />
 			))
 		}
 	</div>
