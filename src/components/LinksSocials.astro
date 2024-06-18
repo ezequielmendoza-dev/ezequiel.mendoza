@@ -1,10 +1,19 @@
+---
+import type { TypesLang } from '../i18n/i18n.types'
+import { useTranslation } from '../i18n/utils'
+
+const { currentLocale } = Astro
+const lang = currentLocale as TypesLang
+const t = useTranslation(lang)
+---
+
 <ul class='flex flex-row space-x-6 pt-5 justify-center'>
 	<li>
 		<a
 			href='https://www.linkedin.com/in/ezequiel-mendoza/'
 			target='_blank'
 			class='hover:text-slate-400'
-			aria-label='Linkedin Ezequiel Mendoza'
+			aria-label=`Linkedin ${t('ui.name')}`
 		>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' class='h-6 w-6' aria-hidden='true'
 				><path
@@ -17,7 +26,7 @@
 		<a
 			href='https://www.instagram.com/ezequielmendoza.dev/'
 			target='_blank'
-			aria-label='Instagram Ezequiel Mendoza'
+			aria-label=`Instagram ${t('ui.name')}`
 			class='hover:text-slate-400'
 		>
 			<svg
@@ -36,7 +45,7 @@
 		<a
 			href='https://github.com/checomendoza'
 			target='_blank'
-			aria-label='Github Ezequiel Mendoza'
+			aria-label=`Github ${t('ui.name')}`
 			class='hover:text-slate-400'
 		>
 			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor' class='h-6 w-6' aria-hidden='true'
@@ -50,7 +59,7 @@
 		<a
 			href='https://www.threads.net/@ezequielmendoza.dev'
 			target='_blank'
-			aria-label='Threads Ezequiel Mendoza'
+			aria-label=`Threads ${t('ui.name')}`
 			class='hover:text-slate-400'
 		>
 			<svg
