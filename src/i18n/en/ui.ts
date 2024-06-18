@@ -3,6 +3,7 @@
 import type { TypesUI } from "../i18n.types";
 
 export const ui: TypesUI = {
+  "ui.name": "Ezequiel Mendoza",
   "ui.title": "Software Developer",
   "ui.greeting": "Hi! My name is",
   "ui.description":

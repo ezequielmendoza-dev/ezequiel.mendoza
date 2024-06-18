@@ -3,6 +3,7 @@
 export type TypesLang = "es" | "en";
 
 export type TypesUI = {
+  "ui.name": string;
   "ui.title": string;
   "ui.description": string;
   "ui.greeting": string;

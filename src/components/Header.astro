@@ -18,10 +18,10 @@ import { getCurrentHost } from '../utilities'
 			<img
 				src=`${getCurrentHost()}/images/webp/ProfilePhoto.webp`
 				class='bg-gray-400 rounded-full w-44'
-				alt='Ezequiel Mendoza | Software Developer'
+				alt=`${t('ui.name')} | ${t('ui.title')}`
 			/>
 			<div class='items-start flex flex-col'>
-				<h1 class='text-2xl font-bold'>Ezequiel Mendoza</h1>
+				<h1 class='text-2xl font-bold'>{t('ui.name')}</h1>
 				<h2 class='text-xl text-gray-500/90 font-semibold'>{t('ui.title')}</h2>
 			</div>
 		</div>
