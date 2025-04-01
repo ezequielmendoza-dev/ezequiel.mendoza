@@ -8,7 +8,7 @@ import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
 const SERVER_PORT = 4321;
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
-const PRODUCTION_HOST_URL = "https://checomendoza.github.io";
+const PRODUCTION_HOST_URL = "https://ezequielmendoza-dev.github.io/";
 let SITE_URL = LOCALHOST_URL;
 let BASE_URL = "";
 
