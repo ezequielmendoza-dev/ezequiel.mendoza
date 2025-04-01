@@ -1,5 +1,5 @@
 /** @format */
-export const PRODUCTION_URL = "https://checomendoza.github.io/ezequiel.mendoza";
+export const PRODUCTION_URL = "https://ezequielmendoza-dev.github.io/ezequiel.mendoza";
 export const PROJECTS_NAMES = [
   "FULL24",
   "AUDEC",
