@@ -1,6 +1,7 @@
 /** @format */
 
 import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
 
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
@@ -20,6 +21,8 @@ if (isBuild) {
 }
 // https://astro.build/config
 export default defineConfig({
+  output: "static", // Cambia "static" a "server" o "hybrid"
+
   site: SITE_URL,
   base: BASE_URL,
   i18n: {
@@ -30,6 +33,7 @@ export default defineConfig({
     },
   },
   integrations: [
+    react(),
     tailwind(),
     mdx(),
     sitemap(),
