@@ -17,7 +17,7 @@ const SCRIPT = process.env.npm_lifecycle_script || "";
 const isBuild = SCRIPT.includes("astro build");
 if (isBuild) {
   SITE_URL = PRODUCTION_HOST_URL;
-  BASE_URL = "/ezequiel.mendoza";
+  BASE_URL = "/";
 }
 // https://astro.build/config
 export default defineConfig({
