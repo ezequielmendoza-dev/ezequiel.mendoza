@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && touch dist/.nojekyll",
+    "deploy": "npm run build && gh-pages -d dist",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@types/react": "^19.0.12",
     "eslint-plugin-astro": "^1.2.0",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"
   }
