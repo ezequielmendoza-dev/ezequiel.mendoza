@@ -1,54 +1,50 @@
-# Astro Starter Kit: Basics
+# 🌐 Ezequiel Mendoza – Web Personal / Personal Website
 
-```sh
-npm create astro@latest -- --template basics
+¡Bienvenido/a a mi espacio en la web! 🚀  
+Este sitio fue creado para mostrar quién soy, qué hago y cómo puedo ayudarte a construir soluciones digitales con diseño y código.
+
+Welcome to my corner of the web! 🌟  
+This site was built to showcase who I am, what I do, and how I can help you build digital solutions with design and code.
+
+🔗 **Enlace en producción / Live site:**  
+[https://ezequielmendoza-dev.github.io](https://ezequielmendoza-dev.github.io)
+
+---
+
+## 🛠️ Tecnologías utilizadas / Tech Stack
+
+- [Astro](https://astro.build/) ⚡ – Framework moderno para sitios rápidos / Modern framework for blazing fast sites
+- [Tailwind CSS](https://tailwindcss.com/) 🎨 – Utilidades atómicas para un diseño limpio / Utility-first CSS for clean and fast UI
+- GitHub Pages 🚀 – Hosting directo desde el repositorio / Direct hosting from GitHub repo
+
+---
+
+## 👨‍💻 Sobre mí / About me
+
+Soy **Ezequiel Mendoza**, desarrollador web especializado en UI con tecnologías modernas como **React**, **Next.js** y herramientas que mejoran la experiencia del usuario.  
+Trabajo como **Senior Software Developer en Globant** y también desarrollo productos como **freelancer**.
+
+I'm **Ezequiel Mendoza**, a web developer focused on UI using modern technologies like **React**, **Next.js**, and tools that improve user experience.  
+Currently working as a **Senior Software Developer at Globant** and also building products as a **freelancer**.
+
+🛠️ Siempre en busca de crear experiencias digitales fluidas, útiles y escalables.  
+🛠️ Always aiming to create smooth, useful, and scalable digital experiences.
+
+📫 **Contacto / Contact:**  
+[LinkedIn](https://www.linkedin.com/in/ezequiel-mendoza/)  
+[Portfolio](https://ezequielmendoza-dev.github.io)
+
+---
+
+## 🧪 Cómo correr el proyecto / Run locally
+
+```bash
+# Clonar el repositorio / Clone the repo
+git clone https://github.com/ezequielmendoza-dev/ezequielmendoza-dev.github.io.git
+
+# Instalar dependencias / Install dependencies
+npm install
+
+# Iniciar el servidor de desarrollo / Start dev server
+npm run dev
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
